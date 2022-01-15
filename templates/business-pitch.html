@@ -1,0 +1,38 @@
+{% extends 'includes/layout.html' %}
+
+
+{% block body %}
+<main class="container">
+  <div class="bg-light p-5 rounded mt-5">
+    <h1> 💼 Business Idea Pitch ‍💼 </h1>
+    <p class="lead">
+    Create some ideas for a quick one paragraph pitch for your business idea, describe your idea and produce useful pitches.
+    </p>
+
+    <h2>Enter the business idea you have</h2>
+
+    <form class="" action="/business-pitch" method="post">
+
+      <div class="mb-3">
+        <label class="form-label">Title of Business</label>
+        <input type="text" class="form-control" name="businessPitch" placeholder="eg. AI Writting Tool">
+        <div class="form-text">Describe the business idea or title for the AI.</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg"> 💃 GET RECOMMENDATIONS</button>
+
+    </form>
+  </div>
+
+
+  <div class="p-3 rounded">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="text-primary">{{prompt}}</h3>
+        <p class="lead">{{openAIAnswer}}</p>
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

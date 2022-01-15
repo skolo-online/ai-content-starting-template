@@ -1,0 +1,38 @@
+{% extends 'includes/layout.html' %}
+
+
+{% block body %}
+<main class="container">
+  <div class="bg-light p-5 rounded mt-5">
+    <h1> ✉️ Cold Email Template ✉️ ️</h1>
+    <p class="lead">
+    This is perfect for marketing agents or companies who need fresh ideas daily on cold email content that is created by AI technology.
+    </p>
+
+    <h2>Enter the services your company provides</h2>
+
+    <form class="" action="/cold-emails" method="post">
+
+      <div class="mb-3">
+        <label class="form-label">Services Provided</label>
+        <input type="text" class="form-control" name="coldEmails" placeholder="eg. CRM Cloud Software">
+        <div class="form-text">Describe the services you provide, for the email content.</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg"> 💃 GET RECOMMENDATIONS</button>
+
+    </form>
+  </div>
+
+
+  <div class="p-3 rounded">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="text-primary">{{prompt}}</h3>
+        <p class="lead">{{openAIAnswer}}</p>
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
